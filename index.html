@@ -9,7 +9,6 @@
             float: right;
             width: 250px;
             height: 180px;
-            right: 850px;
             object-fit: cover;
             border-radius: 2px;
             margin-left: 10em;
@@ -51,49 +50,141 @@
             line-height: 1.7;
             font-size: 18px;
         }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2rem;
+            padding-top: 5rem; /* Ensure there is space for the fixed header */
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+
+        section ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+
+        section li {
+            background: #009879;
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .certification, .internship, .profile {
+            background: #f9f9f9;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .certification p, .internship p, .profile p {
+            text-align: left;
+            margin-left: 0;
+        }
+
+        .internship button a {
+            text-decoration: none;
+            color: white;
+            background: #009879;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .profile img {
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 <body style="font-family: Arial, sans-serif; background-color: lavender; color: #333; margin: 0; padding: 0;">
 
-    <header style="position: fixed; top: 0; width: 100%; background: #333; color: white; padding: 1rem 0; z-index: 1000;">
-        <h1 style="margin: 0;">Dharshana Shree JR</h1>
+    <header>
+        <h1 style="margin: 0; text-align: center;">Dharshana Shree JR</h1>
         <nav>
-            <ul style="list-style: none; display: flex; justify-content: center; padding: 0; margin: 0;">
-                <li style="margin: 0 1rem;"><a href="#about" style="color: white; text-decoration: none;">About</a></li>
-                <li style="margin: 0 1rem;"><a href="#skills" style="color: white; text-decoration: none;">Internship</a></li>
-                <li style="margin: 0 1rem;"><a href="#projects" style="color: white; text-decoration: none;">Certification</a></li>
-                <li style="margin: 0 1rem;"><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Certifications</a></li>
+                <li><a href="#certifications">Internships</a></li>
+                <li><a href="#internships">Profiles</a></li>
+                <li><a href="#profiles">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main style="padding: 2rem; padding-top: 5rem;">
+    <main>
         <section id="about" class="section">
             <div class="container">
                 <h2>ABOUT</h2>
                 <div class="about-content">
                     <img src="dharshphoto-2.jpeg" alt="Profile Picture">
-                    <p>I am Pre-final year engineering student poised to launch a rewarding career journey. Armed with knowledge
-                        and a good academic background, I always bring hunger for learning and collaborative mindset. My problem-solving 
-                        abilities position me as a valuable addition to any team. I enjoy building WebApplications.</p>
+                    <p>I am a pre-final year engineering student poised to launch a rewarding career journey. Armed with knowledge
+                        and a good academic background, I always bring a hunger for learning and a collaborative mindset. My problem-solving 
+                        abilities position me as a valuable addition to any team. I enjoy building Web Applications.</p>
                 </div>
             </div>
         </section>
 
-        <section id="skills" style="margin-bottom: 2rem;">
+        <section id="skills">
             <h2>SKILLS</h2>
-            <ul style="list-style: none; display: flex; flex-wrap: wrap; justify-content: center; padding: 0;">
-                <li style="background: #009879; color: white; padding: 0.5rem 1rem; margin: 0.5rem; border-radius: 5px;">HTML, CSS</li>
-                <li style="background: #009879; color: white; padding: 0.5rem 1rem; margin: 0.5rem; border-radius: 5px;">JavaScript</li>
-                <li style="background: #009879; color: white; padding: 0.5rem 1rem; margin: 0.5rem; border-radius: 5px;">ReactJS</li>
-                <li style="background: #009879; color: white; padding: 0.5rem 1rem; margin: 0.5rem; border-radius: 5px;">C++</li>
-                <li style="background: #009879; color: white; padding: 0.5rem 1rem; margin: 0.5rem; border-radius: 5px;">Java</li>
+            <ul>
+                <li>HTML, CSS</li>
+                <li>JavaScript</li>
+                <li>ReactJS</li>
+                <li>C++</li>
+                <li>Java</li>
             </ul>
         </section>
 
-        <section id="certifications" style="margin-bottom: 2rem;">
+        <section id="certifications">
             <h2>CERTIFICATIONS</h2>
-            <div style="background: #f9f9f9; padding: 1rem; margin: 1rem 0; border: 1px solid #ddd; border-radius: 5px;">
+            <div class="certification">
                 <p>Course on HTML, CSS, JavaScript</p>
                 <p>Course on Internet of Things</p>
                 <p>Course on Embedded Systems</p>
@@ -101,33 +192,31 @@
             </div>
         </section>
 
-        <section id="internships" style="margin-bottom: 2rem;">
+        <section id="internships">
             <h2>INTERNSHIPS</h2>
-            <div style="background: #f9f9f9; padding: 1rem; margin: 1rem 0; border: 1px solid #ddd; border-radius: 5px;">
-                <p style="text-align: left; margin-left: 0;">
-                    <b>PG Connect</b> - Networking Management Company<br>
-                    In this period of internship, I learned about various network criteria. I gained detailed knowledge 
-                    about network systems, routers, etc., to design drawings & calculations as per the specifications 
-                    and standards. I ensured proper integration of various subsystems (LAN, WAN, Sub networking).
-                    <button style="margin-top: 10px;"><a href="pgconnectpdf.pdf" style="text-decoration: none; color: white; background: #009879; padding: 5px 10px; border-radius: 3px;">View Certificate</a></button>
+            <div class="internship">
+                <p><b>PG Connect</b> - Networking Management Company<br>
+                In this period of internship, I learned about various network criteria. I gained detailed knowledge 
+                about network systems, routers, etc., to design drawings & calculations as per the specifications 
+                and standards. I ensured proper integration of various subsystems (LAN, WAN, Sub networking).
+                <button style="margin-top: 10px;"><a href="pgconnectpdf.pdf">View Certificate</a></button>
                 </p>
-                <p style="text-align: left; margin-left: 0;">
-                    <b>Phoenix Softech</b> - IoT and Embedded Systems<br>
-                    During this internship, I learned about IoT and embedded systems in detail. I gained hands-on experience 
-                    with the Arduino Uno board, ultrasonic sensors, temperature, and pressure sensors, and how to operate 
-                    them. Additionally, I coded microcontrollers and embedded programs.
-                    <button style="margin-top: 10px;"><a href="phoenixpdf.pdf" style="text-decoration: none; color: white; background: #009879; padding: 5px 10px; border-radius: 3px;">View Certificate</a></button>
+                <p><b>Phoenix Softech</b> - IoT and Embedded Systems<br>
+                During this internship, I learned about IoT and embedded systems in detail. I gained hands-on experience 
+                with the Arduino Uno board, ultrasonic sensors, temperature, and pressure sensors, and how to operate 
+                them. Additionally, I coded microcontrollers and embedded programs.
+                <button style="margin-top: 10px;"><a href="phoenixpdf.pdf">View Certificate</a></button>
                 </p>
             </div>
         </section>
 
-        <section id="profiles" style="margin-bottom: 2rem;">
+        <section id="profiles">
             <h2>MY PROFILES</h2>
-            <div style="background: #f9f9f9; padding: 1rem; margin: 1rem 0; border: 1px solid #ddd; border-radius: 5px;">
+            <div class="profile">
                 <p>Visit <a href="https://www.linkedin.com/in/dharshanashree211004a" target="_blank" title="LinkedIn Profile" style="color: #009879;">LinkedIn</a> for more information.</p>
-                <img src="https://sguru.org/wp-content/uploads/2018/02/Logo-LinkedIn-Round.png" alt="LinkedIn" style="width: 30px; height: 30px;">
+                <img src="https://sguru.org/wp-content/uploads/2018/02/Logo-LinkedIn-Round.png" alt="LinkedIn">
                 <p>Visit <a href="https://github.com/dharshanashree" target="_blank" title="GitHub Profile" style="color: #009879;">GitHub</a> for more information.</p>
-                <img src="https://pngimg.com/uploads/github/github_PNG80.png" alt="GitHub" style="width: 30px; height: 30px;">
+                <img src="https://pngimg.com/uploads/github/github_PNG80.png" alt="GitHub">
             </div>
         </section>
 
@@ -137,7 +226,7 @@
         </section>
     </main>
 
-    <footer style="background: #333; color: white; text-align: center; padding: 1rem 0; margin-top: 2rem;">
+    <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
 
